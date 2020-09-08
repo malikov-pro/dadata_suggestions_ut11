@@ -1,0 +1,523 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.10">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<Pages name="ГруппаСтраницыФормы" id="40">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы формы</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="ГруппаСтраницыФормыExtendedTooltip" id="53"/>
+			<ChildItems>
+				<Page name="ГруппаОсновныеСведения" id="41">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Основные сведения</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаОсновныеСведенияExtendedTooltip" id="54"/>
+					<ChildItems>
+						<InputField name="Наименование" id="1">
+							<DataPath>1/-3</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Фамилия, имя, отчество</v8:content>
+								</v8:item>
+							</Title>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>65</MaxWidth>
+							<Wrap>false</Wrap>
+							<ContextMenu name="НаименованиеКонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="НаименованиеExtendedTooltip" id="55"/>
+							<Events>
+								<Event name="AutoComplete" callType="Override">dd_НаименованиеАвтоПодборВместо</Event>
+								<Event name="ChoiceProcessing" callType="Override">dd_НаименованиеОбработкаВыбораВместо</Event>
+							</Events>
+						</InputField>
+						<InputField name="ДолжностьПоВизитке" id="46">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>65</MaxWidth>
+							<ContextMenu name="ДолжностьПоВизиткеКонтекстноеМеню" id="47"/>
+							<ExtendedTooltip name="ДолжностьПоВизиткеExtendedTooltip" id="56"/>
+						</InputField>
+						<UsualGroup name="ГруппаРодители" id="34">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Родители</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаРодителиExtendedTooltip" id="57"/>
+							<ChildItems>
+								<InputField name="Владелец" id="3">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>30</MaxWidth>
+									<Wrap>false</Wrap>
+									<ContextMenu name="ВладелецКонтекстноеМеню" id="4"/>
+									<ExtendedTooltip name="ВладелецExtendedTooltip" id="58"/>
+								</InputField>
+								<UsualGroup name="ГруппаПолДатаРождения" id="48">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Пол дата рождения</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаПолДатаРожденияExtendedTooltip" id="59"/>
+									<ChildItems>
+										<InputField name="ДатаРождения" id="51">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>9</MaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ContextMenu name="ДатаРожденияКонтекстноеМеню" id="52"/>
+											<ExtendedTooltip name="ДатаРожденияExtendedTooltip" id="60"/>
+										</InputField>
+										<InputField name="Пол" id="49">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>7</MaxWidth>
+											<ContextMenu name="ПолКонтекстноеМеню" id="50"/>
+											<ExtendedTooltip name="ПолExtendedTooltip" id="61"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаСвязьСПартнером" id="35">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Связь с партнером:</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Horizontal</Group>
+							<ExtendedTooltip name="ГруппаСвязьСПартнеромExtendedTooltip" id="62"/>
+							<ChildItems>
+								<InputField name="ДатаРегистрацииСвязи" id="9">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дата регистрации</v8:content>
+										</v8:item>
+									</Title>
+									<Wrap>false</Wrap>
+									<ContextMenu name="ДатаРегистрацииСвязиКонтекстноеМеню" id="10"/>
+									<ExtendedTooltip name="ДатаРегистрацииСвязиExtendedTooltip" id="63"/>
+								</InputField>
+								<InputField name="ДатаПрекращенияСвязи" id="11">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дата прекращения</v8:content>
+										</v8:item>
+									</Title>
+									<Wrap>false</Wrap>
+									<ContextMenu name="ДатаПрекращенияСвязиКонтекстноеМеню" id="12"/>
+									<ExtendedTooltip name="ДатаПрекращенияСвязиExtendedTooltip" id="64"/>
+								</InputField>
+								<InputField name="Автор" id="13">
+									<HorizontalStretch>false</HorizontalStretch>
+									<Wrap>false</Wrap>
+									<ContextMenu name="АвторКонтекстноеМеню" id="14"/>
+									<ExtendedTooltip name="АвторExtendedTooltip" id="65"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаОписание" id="36">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Роли контактного лица</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<ExtendedTooltip name="ГруппаОписаниеExtendedTooltip" id="66"/>
+					<ChildItems>
+						<Table name="РолиКонтактногоЛицаВОрганизации" id="27">
+							<SkipOnInput>false</SkipOnInput>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HeightInTableRows>4</HeightInTableRows>
+							<Header>false</Header>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<FileDragMode>AsFile</FileDragMode>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Роли в организации - партнере</v8:content>
+								</v8:item>
+							</Title>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="РолиКонтактногоЛицаВОрганизацииКонтекстноеМеню" id="28"/>
+							<AutoCommandBar name="РолиКонтактногоЛицаВОрганизацииКоманднаяПанель" id="29"/>
+							<ExtendedTooltip name="РолиКонтактногоЛицаВОрганизацииExtendedTooltip" id="67"/>
+							<SearchStringAddition name="РолиКонтактногоЛицаВОрганизацииСтрокаПоиска" id="74">
+								<AdditionSource>
+									<Item>РолиКонтактногоЛицаВОрганизации</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="РолиКонтактногоЛицаВОрганизацииСтрокаПоискаКонтекстноеМеню" id="75"/>
+								<ExtendedTooltip name="РолиКонтактногоЛицаВОрганизацииСтрокаПоискаРасширеннаяПодсказка" id="76"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="РолиКонтактногоЛицаВОрганизацииСостояниеПросмотра" id="77">
+								<AdditionSource>
+									<Item>РолиКонтактногоЛицаВОрганизации</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="РолиКонтактногоЛицаВОрганизацииСостояниеПросмотраКонтекстноеМеню" id="78"/>
+								<ExtendedTooltip name="РолиКонтактногоЛицаВОрганизацииСостояниеПросмотраРасширеннаяПодсказка" id="79"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="РолиКонтактногоЛицаВОрганизацииУправлениеПоиском" id="80">
+								<AdditionSource>
+									<Item>РолиКонтактногоЛицаВОрганизации</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="РолиКонтактногоЛицаВОрганизацииУправлениеПоискомКонтекстноеМеню" id="81"/>
+								<ExtendedTooltip name="РолиКонтактногоЛицаВОрганизацииУправлениеПоискомРасширеннаяПодсказка" id="82"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="РольКонтактногоЛица" id="32">
+									<Width>20</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<Wrap>false</Wrap>
+									<ContextMenu name="РольКонтактногоЛицаКонтекстноеМеню" id="33"/>
+									<ExtendedTooltip name="РольКонтактногоЛицаExtendedTooltip" id="68"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаДополнительныеРеквизиты" id="39">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дополнительно</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаДополнительныеРеквизитыExtendedTooltip" id="69"/>
+				</Page>
+				<Page name="ГруппаКонтактнаяИнформация" id="37">
+					<EnableContentChange>true</EnableContentChange>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Адреса, телефоны</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаКонтактнаяИнформацияExtendedTooltip" id="70"/>
+					<ChildItems>
+						<LabelDecoration name="ПустаяДекорацияКонтактнаяИнформация" id="83">
+							<ContextMenu name="ПустаяДекорацияКонтактнаяИнформацияКонтекстноеМеню" id="84"/>
+							<ExtendedTooltip name="ПустаяДекорацияКонтактнаяИнформацияРасширеннаяПодсказка" id="85"/>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаДополнительнаяИнформация" id="43">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дополнительная информация</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаДополнительнаяИнформацияExtendedTooltip" id="71"/>
+					<ChildItems>
+						<InputField name="ДополнительнаяИнформация" id="44">
+							<TitleLocation>None</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HorizontalStretch>true</HorizontalStretch>
+							<MultiLine>true</MultiLine>
+							<ContextMenu name="ДополнительнаяИнформацияКонтекстноеМеню" id="45"/>
+							<ExtendedTooltip name="ДополнительнаяИнформацияExtendedTooltip" id="72"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<InputField name="Комментарий" id="15">
+			<TitleLocation>Top</TitleLocation>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<Height>2</Height>
+			<HorizontalStretch>true</HorizontalStretch>
+			<VerticalStretch>false</VerticalStretch>
+			<MultiLine>true</MultiLine>
+			<ExtendedEdit>true</ExtendedEdit>
+			<ChoiceButton>true</ChoiceButton>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="16"/>
+			<ExtendedTooltip name="КомментарийExtendedTooltip" id="73"/>
+		</InputField>
+	</ChildItems>
+	<Attributes/>
+	<Parameters>
+		<Parameter name="НаименованиеИзменено">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+	</Parameters>
+	<BaseForm version="2.10">
+		<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+		<ChildItems>
+			<Pages name="ГруппаСтраницыФормы" id="40">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Страницы формы</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ГруппаСтраницыФормыExtendedTooltip" id="53"/>
+				<ChildItems>
+					<Page name="ГруппаОсновныеСведения" id="41">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Основные сведения</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ГруппаОсновныеСведенияExtendedTooltip" id="54"/>
+						<ChildItems>
+							<InputField name="Наименование" id="1">
+								<DataPath>1/-3</DataPath>
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Фамилия, имя, отчество</v8:content>
+									</v8:item>
+								</Title>
+								<AutoMaxWidth>false</AutoMaxWidth>
+								<MaxWidth>65</MaxWidth>
+								<Wrap>false</Wrap>
+								<ContextMenu name="НаименованиеКонтекстноеМеню" id="2"/>
+								<ExtendedTooltip name="НаименованиеExtendedTooltip" id="55"/>
+							</InputField>
+							<InputField name="ДолжностьПоВизитке" id="46">
+								<AutoMaxWidth>false</AutoMaxWidth>
+								<MaxWidth>65</MaxWidth>
+								<ContextMenu name="ДолжностьПоВизиткеКонтекстноеМеню" id="47"/>
+								<ExtendedTooltip name="ДолжностьПоВизиткеExtendedTooltip" id="56"/>
+							</InputField>
+							<UsualGroup name="ГруппаРодители" id="34">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Родители</v8:content>
+									</v8:item>
+								</Title>
+								<Group>Horizontal</Group>
+								<Representation>None</Representation>
+								<ShowTitle>false</ShowTitle>
+								<ExtendedTooltip name="ГруппаРодителиExtendedTooltip" id="57"/>
+								<ChildItems>
+									<InputField name="Владелец" id="3">
+										<AutoMaxWidth>false</AutoMaxWidth>
+										<MaxWidth>30</MaxWidth>
+										<Wrap>false</Wrap>
+										<ContextMenu name="ВладелецКонтекстноеМеню" id="4"/>
+										<ExtendedTooltip name="ВладелецExtendedTooltip" id="58"/>
+									</InputField>
+									<UsualGroup name="ГруппаПолДатаРождения" id="48">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Пол дата рождения</v8:content>
+											</v8:item>
+										</Title>
+										<Group>Horizontal</Group>
+										<Representation>None</Representation>
+										<ShowTitle>false</ShowTitle>
+										<ExtendedTooltip name="ГруппаПолДатаРожденияExtendedTooltip" id="59"/>
+										<ChildItems>
+											<InputField name="ДатаРождения" id="51">
+												<AutoMaxWidth>false</AutoMaxWidth>
+												<MaxWidth>9</MaxWidth>
+												<HorizontalStretch>false</HorizontalStretch>
+												<ContextMenu name="ДатаРожденияКонтекстноеМеню" id="52"/>
+												<ExtendedTooltip name="ДатаРожденияExtendedTooltip" id="60"/>
+											</InputField>
+											<InputField name="Пол" id="49">
+												<AutoMaxWidth>false</AutoMaxWidth>
+												<MaxWidth>7</MaxWidth>
+												<ContextMenu name="ПолКонтекстноеМеню" id="50"/>
+												<ExtendedTooltip name="ПолExtendedTooltip" id="61"/>
+											</InputField>
+										</ChildItems>
+									</UsualGroup>
+								</ChildItems>
+							</UsualGroup>
+							<UsualGroup name="ГруппаСвязьСПартнером" id="35">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Связь с партнером:</v8:content>
+									</v8:item>
+								</Title>
+								<Group>Horizontal</Group>
+								<ExtendedTooltip name="ГруппаСвязьСПартнеромExtendedTooltip" id="62"/>
+								<ChildItems>
+									<InputField name="ДатаРегистрацииСвязи" id="9">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Дата регистрации</v8:content>
+											</v8:item>
+										</Title>
+										<Wrap>false</Wrap>
+										<ContextMenu name="ДатаРегистрацииСвязиКонтекстноеМеню" id="10"/>
+										<ExtendedTooltip name="ДатаРегистрацииСвязиExtendedTooltip" id="63"/>
+									</InputField>
+									<InputField name="ДатаПрекращенияСвязи" id="11">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Дата прекращения</v8:content>
+											</v8:item>
+										</Title>
+										<Wrap>false</Wrap>
+										<ContextMenu name="ДатаПрекращенияСвязиКонтекстноеМеню" id="12"/>
+										<ExtendedTooltip name="ДатаПрекращенияСвязиExtendedTooltip" id="64"/>
+									</InputField>
+									<InputField name="Автор" id="13">
+										<HorizontalStretch>false</HorizontalStretch>
+										<Wrap>false</Wrap>
+										<ContextMenu name="АвторКонтекстноеМеню" id="14"/>
+										<ExtendedTooltip name="АвторExtendedTooltip" id="65"/>
+									</InputField>
+								</ChildItems>
+							</UsualGroup>
+						</ChildItems>
+					</Page>
+					<Page name="ГруппаОписание" id="36">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Роли контактного лица</v8:content>
+							</v8:item>
+						</Title>
+						<Group>Horizontal</Group>
+						<ExtendedTooltip name="ГруппаОписаниеExtendedTooltip" id="66"/>
+						<ChildItems>
+							<Table name="РолиКонтактногоЛицаВОрганизации" id="27">
+								<SkipOnInput>false</SkipOnInput>
+								<AutoMaxWidth>false</AutoMaxWidth>
+								<HeightInTableRows>4</HeightInTableRows>
+								<Header>false</Header>
+								<AutoInsertNewRow>true</AutoInsertNewRow>
+								<FileDragMode>AsFile</FileDragMode>
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Роли в организации - партнере</v8:content>
+									</v8:item>
+								</Title>
+								<RowFilter xsi:nil="true"/>
+								<ContextMenu name="РолиКонтактногоЛицаВОрганизацииКонтекстноеМеню" id="28"/>
+								<AutoCommandBar name="РолиКонтактногоЛицаВОрганизацииКоманднаяПанель" id="29"/>
+								<ExtendedTooltip name="РолиКонтактногоЛицаВОрганизацииExtendedTooltip" id="67"/>
+								<SearchStringAddition name="РолиКонтактногоЛицаВОрганизацииСтрокаПоиска" id="74">
+									<AdditionSource>
+										<Item>РолиКонтактногоЛицаВОрганизации</Item>
+										<Type>SearchStringRepresentation</Type>
+									</AdditionSource>
+									<ContextMenu name="РолиКонтактногоЛицаВОрганизацииСтрокаПоискаКонтекстноеМеню" id="75"/>
+									<ExtendedTooltip name="РолиКонтактногоЛицаВОрганизацииСтрокаПоискаРасширеннаяПодсказка" id="76"/>
+								</SearchStringAddition>
+								<ViewStatusAddition name="РолиКонтактногоЛицаВОрганизацииСостояниеПросмотра" id="77">
+									<AdditionSource>
+										<Item>РолиКонтактногоЛицаВОрганизации</Item>
+										<Type>ViewStatusRepresentation</Type>
+									</AdditionSource>
+									<ContextMenu name="РолиКонтактногоЛицаВОрганизацииСостояниеПросмотраКонтекстноеМеню" id="78"/>
+									<ExtendedTooltip name="РолиКонтактногоЛицаВОрганизацииСостояниеПросмотраРасширеннаяПодсказка" id="79"/>
+								</ViewStatusAddition>
+								<SearchControlAddition name="РолиКонтактногоЛицаВОрганизацииУправлениеПоиском" id="80">
+									<AdditionSource>
+										<Item>РолиКонтактногоЛицаВОрганизации</Item>
+										<Type>SearchControl</Type>
+									</AdditionSource>
+									<ContextMenu name="РолиКонтактногоЛицаВОрганизацииУправлениеПоискомКонтекстноеМеню" id="81"/>
+									<ExtendedTooltip name="РолиКонтактногоЛицаВОрганизацииУправлениеПоискомРасширеннаяПодсказка" id="82"/>
+								</SearchControlAddition>
+								<ChildItems>
+									<InputField name="РольКонтактногоЛица" id="32">
+										<Width>20</Width>
+										<HorizontalStretch>false</HorizontalStretch>
+										<Wrap>false</Wrap>
+										<ContextMenu name="РольКонтактногоЛицаКонтекстноеМеню" id="33"/>
+										<ExtendedTooltip name="РольКонтактногоЛицаExtendedTooltip" id="68"/>
+									</InputField>
+								</ChildItems>
+							</Table>
+						</ChildItems>
+					</Page>
+					<Page name="ГруппаДополнительныеРеквизиты" id="39">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Дополнительно</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ГруппаДополнительныеРеквизитыExtendedTooltip" id="69"/>
+					</Page>
+					<Page name="ГруппаКонтактнаяИнформация" id="37">
+						<EnableContentChange>true</EnableContentChange>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Адреса, телефоны</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ГруппаКонтактнаяИнформацияExtendedTooltip" id="70"/>
+						<ChildItems>
+							<LabelDecoration name="ПустаяДекорацияКонтактнаяИнформация" id="83">
+								<ContextMenu name="ПустаяДекорацияКонтактнаяИнформацияКонтекстноеМеню" id="84"/>
+								<ExtendedTooltip name="ПустаяДекорацияКонтактнаяИнформацияРасширеннаяПодсказка" id="85"/>
+							</LabelDecoration>
+						</ChildItems>
+					</Page>
+					<Page name="ГруппаДополнительнаяИнформация" id="43">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Дополнительная информация</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ГруппаДополнительнаяИнформацияExtendedTooltip" id="71"/>
+						<ChildItems>
+							<InputField name="ДополнительнаяИнформация" id="44">
+								<TitleLocation>None</TitleLocation>
+								<AutoMaxWidth>false</AutoMaxWidth>
+								<HorizontalStretch>true</HorizontalStretch>
+								<MultiLine>true</MultiLine>
+								<ContextMenu name="ДополнительнаяИнформацияКонтекстноеМеню" id="45"/>
+								<ExtendedTooltip name="ДополнительнаяИнформацияExtendedTooltip" id="72"/>
+							</InputField>
+						</ChildItems>
+					</Page>
+				</ChildItems>
+			</Pages>
+			<InputField name="Комментарий" id="15">
+				<TitleLocation>Top</TitleLocation>
+				<AutoMaxWidth>false</AutoMaxWidth>
+				<Height>2</Height>
+				<HorizontalStretch>true</HorizontalStretch>
+				<VerticalStretch>false</VerticalStretch>
+				<MultiLine>true</MultiLine>
+				<ExtendedEdit>true</ExtendedEdit>
+				<ChoiceButton>true</ChoiceButton>
+				<ContextMenu name="КомментарийКонтекстноеМеню" id="16"/>
+				<ExtendedTooltip name="КомментарийExtendedTooltip" id="73"/>
+			</InputField>
+		</ChildItems>
+		<Attributes/>
+	</BaseForm>
+</Form>
